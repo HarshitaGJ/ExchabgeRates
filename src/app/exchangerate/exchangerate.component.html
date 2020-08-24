@@ -1,0 +1,38 @@
+<div class="maincontainer">
+    <div class="spacing">
+        Choose Currency From below List
+    </div>
+    <div class="spacing">
+        <select [(ngModel)]="status">
+            <option>Select Currency</option>
+            <option *ngFor="let option of options" [value]="option">{{option}}</option>
+        </select>
+    </div>
+    <div class="spacing">
+        <button class="buttonspacing" (click)="onConvert(option)">Convert</button>
+        <button class="buttonspacing" (click)="displayTrend()">Show Trend</button>
+    </div>
+
+    <div class="resultcontainer">
+        <div class="rates">
+            <table>
+                <tr>
+                    <th>
+                        <label>{{caption}}</label></th>
+                </tr>
+                <tr>
+                    <td *ngFor="let header of headers">{{header}}</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let value of values">{{value}}</td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="chart-container">
+            <canvas id="trendchart"></canvas>
+        </div>
+    </div>
+
+</div>

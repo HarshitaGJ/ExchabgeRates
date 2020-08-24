@@ -1,0 +1,33 @@
+.maincontainer {
+    text-align: center;
+
+    .spacing {
+        padding-top: 1rem;
+
+        .buttonspacing {
+            margin-left: 16px;
+        }
+    }
+
+    .resultcontainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        .rates {
+            width: 30%;
+            text-align: center;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 70%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            float: right;
+        }
+    }
+}
